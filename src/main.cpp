@@ -47,7 +47,7 @@
 
 
 // #include <iostream>
-// #include "NpyReader.h"
+#include "NpyReader.h"
 // #include "Conv2DLayer.h"
 // #include <vector>
 // #include <string>
@@ -114,8 +114,11 @@
 
 
 #include <iostream>
+#include "NpyReader.h"
 
 int main(){
     std::cout<<"it's working.";
+    NpyReader reader  ;
+    reader.testLoadNpyFile();
     return 0;
 }

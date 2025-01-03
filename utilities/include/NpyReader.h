@@ -7,9 +7,9 @@
 class NpyReader {
 public:
     static std::vector<float> loadNpyFile(const std::string& filePath, std::vector<size_t>& shape);
-
-private:
-    NpyReader() = default; // Prevent instantiation
+    void testLoadNpyFile();
+// private:
+    // NpyReader() = default; // Prevent instantiation
 };
 
 #endif // NPY_READER_H

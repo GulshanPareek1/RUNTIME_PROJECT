@@ -20,3 +20,25 @@ std::vector<float> NpyReader::loadNpyFile(const std::string& filePath, std::vect
     // Convert the raw data to a vector
     return std::vector<float>(dataPtr, dataPtr + npArray.num_vals);
 }
+
+void NpyReader::testLoadNpyFile() {
+    try {
+        std::string testFilePath = "../../data/layer_dumps/layer_0_Conv2d_input.npy"; // Replace with the actual path to a test .npy file
+        std::vector<size_t> shape;
+        std::vector<float> data = loadNpyFile(testFilePath, shape);
+
+        // Print out the shape and first few elements for verification
+        std::cout << "Shape: ";
+        for (size_t dim : shape) {
+            std::cout << dim << " ";
+        }
+        std::cout << "\nData (first 5 elements): ";
+        for (size_t i = 0; i < std::min(data.size(), size_t(5)); ++i) {
+            std::cout << data[i] << " ";
+        }
+        std::cout << std::endl;
+
+    } catch (const std::exception& e) {
+        std::cerr << "Test failed: " << e.what() << std::endl;
+    }
+}

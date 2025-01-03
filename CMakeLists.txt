@@ -27,5 +27,6 @@ add_executable(App src/main.cpp)
 
 # Link libraries to the application
 target_link_libraries(App Operators Utilities)
-# target_link_libraries(App cnpy Utilities ZLIB::ZLIB)
+ target_link_libraries(App cnpy Utilities)
+# Utilities ZLIB::ZLIB)
 
