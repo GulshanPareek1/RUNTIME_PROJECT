@@ -1,0 +1,110 @@
+[
+    {
+        "layer_index": 0,
+        "layer_type": "Conv2d",
+        "input": "layer_dumps/layer_0_Conv2d_input.npy",
+        "weights": "layer_dumps/layer_0_Conv2d_weights.npy",
+        "bias": "layer_dumps/layer_0_Conv2d_bias.npy",
+        "output": "layer_dumps/layer_0_Conv2d_output.npy",
+        "attributes": {
+            "layer_type": "Conv2d",
+            "kernel_size": [3, 3],
+            "stride": [1, 1],
+            "padding": [1, 1],
+            "activation": "ReLU"
+        }
+    },
+    {
+        "layer_index": 1,
+        "layer_type": "MaxPool2d",
+        "input": "layer_dumps/layer_1_MaxPool2d_input.npy",
+        "weights": null,
+        "bias": null,
+        "output": "layer_dumps/layer_1_MaxPool2d_output.npy",
+        "attributes": {
+            "layer_type": "MaxPool2d",
+            "kernel_size": [2, 2],
+            "stride": [2, 2]
+        }
+    },
+    {
+        "layer_index": 2,
+        "layer_type": "Conv2d",
+        "input": "layer_dumps/layer_2_Conv2d_input.npy",
+        "weights": "layer_dumps/layer_2_Conv2d_weights.npy",
+        "bias": "layer_dumps/layer_2_Conv2d_bias.npy",
+        "output": "layer_dumps/layer_2_Conv2d_output.npy",
+        "attributes": {
+            "layer_type": "Conv2d",
+            "kernel_size": [3, 3],
+            "stride": [1, 1],
+            "padding": [1, 1],
+            "activation": "ReLU"
+        }
+    },
+    {
+        "layer_index": 3,
+        "layer_type": "MaxPool2d",
+        "input": "layer_dumps/layer_3_MaxPool2d_input.npy",
+        "weights": null,
+        "bias": null,
+        "output": "layer_dumps/layer_3_MaxPool2d_output.npy",
+        "attributes": {
+            "layer_type": "MaxPool2d",
+            "kernel_size": [2, 2],
+            "stride": [2, 2]
+        }
+    },
+    {
+        "layer_index": 4,
+        "layer_type": "Conv2d",
+        "input": "layer_dumps/layer_4_Conv2d_input.npy",
+        "weights": "layer_dumps/layer_4_Conv2d_weights.npy",
+        "bias": "layer_dumps/layer_4_Conv2d_bias.npy",
+        "output": "layer_dumps/layer_4_Conv2d_output.npy",
+        "attributes": {
+            "layer_type": "Conv2d",
+            "kernel_size": [3, 3],
+            "stride": [1, 1],
+            "padding": [1, 1],
+            "activation": "ReLU"
+        }
+    },
+    {
+        "layer_index": 5,
+        "layer_type": "MaxPool2d",
+        "input": "layer_dumps/layer_5_MaxPool2d_input.npy",
+        "weights": null,
+        "bias": null,
+        "output": "layer_dumps/layer_5_MaxPool2d_output.npy",
+        "attributes": {
+            "layer_type": "MaxPool2d",
+            "kernel_size": [2, 2],
+            "stride": [2, 2]
+        }
+    },
+    {
+        "layer_index": 6,
+        "layer_type": "Linear",
+        "input": "layer_dumps/layer_6_Linear_input.npy",
+        "weights": "layer_dumps/layer_6_Linear_weights.npy",
+        "bias": "layer_dumps/layer_6_Linear_bias.npy",
+        "output": "layer_dumps/layer_6_Linear_output.npy",
+        "attributes": {
+            "layer_type": "Linear",
+            "activation": "ReLU"
+        }
+    },
+    {
+        "layer_index": 7,
+        "layer_type": "Linear",
+        "input": "layer_dumps/layer_7_Linear_input.npy",
+        "weights": "layer_dumps/layer_7_Linear_weights.npy",
+        "bias": "layer_dumps/layer_7_Linear_bias.npy",
+        "output": "layer_dumps/layer_7_Linear_output.npy",
+        "attributes": {
+            "layer_type": "Linear",
+            "activation": "Softmax"
+        }
+    }
+]
