@@ -18,15 +18,15 @@ include_directories(
 
 # ${CMAKE_SOURCE_DIR}/utilities/include  # Add utilities include path
 # Add subdirectories for cnpy, layers, utilities, and tests
-add_subdirectory(include) # Add cnpy as a subdirectory
+add_subdirectory(Include) # Add cnpy as a subdirectory
+add_subdirectory(Utilities)
 add_subdirectory(Operators)
 add_subdirectory(Test_Operators)
-add_subdirectory(utilities)
 
 add_executable(App src/main.cpp)
 
 # Link libraries to the application
 target_link_libraries(App Operators Utilities)
-target_link_libraries(App cnpy Utilities)
+# target_link_libraries(App cnpy Utilities)
 
 
