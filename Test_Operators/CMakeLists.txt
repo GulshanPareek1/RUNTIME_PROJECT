@@ -1,9 +1,15 @@
-# # Test_Operators/CMakeLists.txt
-# add_executable(Test_Operators
-#     src/conv_test.cpp
-#     src/relu_test.cpp
-#     src/maxpool_test.cpp
-# )
 
-# target_include_directories(Test_Operators PUBLIC include)
-# target_link_libraries(Test_Operators Operators Utilities)
+
+# Add tests for ConvolutionLayer
+add_executable(Test_ConvolutionLayer src/Test_ConvolutionLayer.cpp)
+target_include_directories(Test_ConvolutionLayer PRIVATE ../include)
+target_link_libraries(Test_ConvolutionLayer PRIVATE Operators)
+
+# Add tests for MaxPoolingLayer
+add_executable(Test_MaxPoolingLayer src/Test_MaxPoolingLayer.cpp)
+target_include_directories(Test_MaxPoolingLayer PRIVATE ../include)
+target_link_libraries(Test_MaxPoolingLayer PRIVATE Operators)
+
+add_executable(Test_LinearLayer src/Test_LinearLayer.cpp)
+target_include_directories(Test_LinearLayer PRIVATE ../include)
+target_link_libraries(Test_LinearLayer PRIVATE Operators)
