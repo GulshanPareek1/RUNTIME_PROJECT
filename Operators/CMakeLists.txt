@@ -14,8 +14,9 @@
 # target_link_libraries(Operators PUBLIC Utilities)
 
 add_library(Operators
-    src/Conv2DLayer.cpp
-    include/Conv2DLayer.h
+    src/ConvolutionLayer.cpp
+    # include/ConvolutionLayer.h
 )
 
 target_include_directories(Operators PUBLIC include)
+target_link_libraries(Operators Utilities) # Link with Utilities

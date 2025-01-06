@@ -2,7 +2,9 @@
 add_library(Utilities 
 src/JsonParser.cpp
 src/BinaryFileReader.cpp
+src/OutputComparer.cpp
 )
+
 
 # Add include directory relative to the utilities folder
 target_include_directories(Utilities PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)

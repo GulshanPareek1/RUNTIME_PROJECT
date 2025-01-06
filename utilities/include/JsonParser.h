@@ -6,7 +6,7 @@
 #include <map>
 #include <nlohmann/json.hpp>
 
-// Define a structure to represent layer details
+// Structure to represent layer details
 struct LayerConfig {
     int layerIndex;
     std::string layerType;
