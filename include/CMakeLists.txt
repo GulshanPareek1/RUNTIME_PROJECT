@@ -12,4 +12,11 @@ target_include_directories(cnpy PUBLIC
 )
 # Link zlib to the cnpy library
 # find_package(ZLIB REQUIRED)
-# target_link_libraries(cnpy PUBLIC ZLIB::ZLIB)
+# target_link_libraries(cnpy PUBLIC Utilities)
+
+find_package(ZLIB REQUIRED)
+
+include_directories(${ZLIB_INCLUDE_DIRS})
+
+# add_library(cnpy SHARED "cnpy.cpp")
+target_link_libraries(cnpy ${ZLIB_LIBRARIES})

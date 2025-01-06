@@ -12,4 +12,4 @@ add_library(Utilities
 target_include_directories(Utilities PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # Link cnpy to Utilities
-# target_link_libraries(Utilities PUBLIC cnpy)
+target_link_libraries(Utilities PUBLIC cnpy)
