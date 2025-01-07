@@ -18,7 +18,7 @@ This project is a C++ framework designed to execute and test neural network laye
     Visual Studio: Used as the primary IDE for development and debugging.
 
 ## Project Folder Structure
-
+```
 Project_Folder
 ├── Operators
 │   ├── src
@@ -63,6 +63,7 @@ Project_Folder
 ├── CMakeLists.txt
 ├── README.md
 |──.gitignore
+```
 
 ## Features
 
