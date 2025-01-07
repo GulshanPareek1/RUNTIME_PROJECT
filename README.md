@@ -1,13 +1,13 @@
-#Neural Network Layer Execution and Testing Framework in C++
+# Neural Network Layer Execution and Testing Framework in C++
 
-##Project Description
+## Project Description
 
 This project is a C++ framework designed to execute and test neural network layers such as Convolution, MaxPooling, and Linear layers.
  The framework leverages a JSON-based configuration file for defining layer properties and operations.
-  It supports data processing, utility functions for binary file handling, 
+  It supports data processing, utility functions for binary file handling, parsing the json file
   and rigorous validation of output against reference files through a comprehensive testing suite.
 
-##Tools and Libraries Used
+## Tools and Libraries Used
 
     CMake: For project configuration and build management.
 
@@ -17,7 +17,7 @@ This project is a C++ framework designed to execute and test neural network laye
 
     Visual Studio: Used as the primary IDE for development and debugging.
 
-##Project Folder Structure
+## Project Folder Structure
 
 Project_Folder
 ├── Operators
@@ -64,7 +64,7 @@ Project_Folder
 ├── README.md
 |──.gitignore
 
-##Features
+## Features
 
     Modular Layer Design: Each neural network layer is implemented as a separate class with encapsulated logic.
 
@@ -76,7 +76,7 @@ Project_Folder
 
     Custom Activations: Support for common activation functions like ReLU and Softmax.
 
-##Step-by-Step Guide to Running the Project
+## Step-by-Step Guide to Running the Project
 
     Step 1: Set Up the Environment
 
@@ -88,7 +88,7 @@ Project_Folder
 
     NMake (provided with Visual Studio).
 
-##Clone or download the project repository to your local system.
+## Clone or download the project repository to your local system.
 
     git clone https://github.com/GulshanPareek1/RUNTIME_PROJECT
     cd <repository_folder>
@@ -134,7 +134,7 @@ Project_Folder
     Test Passed: Outputs are matching for MaxPooling Layer!
     Test Passed: Outputs are matching for Linear Layer!
 
-##Configuration File (JSON)
+## Configuration File (JSON)
 
 The JSON file defines the sequence and properties of layers to execute. Example:
 ```json
@@ -197,8 +197,8 @@ The JSON file defines the sequence and properties of layers to execute. Example:
     }
   ]
 }
-
-##Example Layers
+```
+## Example Layers
 
 Convolution Layer
 
@@ -220,7 +220,7 @@ Implements a fully connected layer.
 
 Supports activation functions like ReLU and Softmax.
 
-##Testing Framework
+## Testing Framework
 
 Each layer's functionality is validated using:
 
@@ -236,7 +236,7 @@ Test Passed: Outputs are matching for Convolution Layer!
 Test Passed: Outputs are matching for MaxPooling Layer!
 Test Passed: Outputs are matching for Linear Layer!
 
-##Troubleshooting
+## Troubleshooting
 
 Binary File Not Found:
 Ensure the required files are present in the data/input directory and are named correctly.
@@ -250,7 +250,7 @@ Check the layer implementation logic or reference files for consistency.
 
 
 
-##Contributors
+## Contributors
 Gulshan Pareek
 
 
