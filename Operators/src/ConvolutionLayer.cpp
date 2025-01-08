@@ -6,8 +6,8 @@
 #include<iostream>
 
 ConvolutionLayer::ConvolutionLayer(
-    const std::string& inputFilePath,
-    const std::string& weightsFilePath,
+    const std::string& inputFilePath, 
+    const std::string& weightsFilePath,//weight pointer along with w_c, w_h, w_w
     const std::string& biasFilePath,
     const std::string& outputFilePath,
     const std::vector<int>& kernelSize,
@@ -26,11 +26,11 @@ ConvolutionLayer::ConvolutionLayer(
 void ConvolutionLayer::execute() {
     // Read input, weights, and bias
     BinaryFileReader inputReader(inputFilePath);
-    BinaryFileReader weightsReader(weightsFilePath);
+    BinaryFileReader weightsReader(weightsFilePath); //remove w
     BinaryFileReader biasReader(biasFilePath);
 
     std::vector<float> input = inputReader.readData();
-    std::vector<float> weights = weightsReader.readData();
+    std::vector<float> weights = weightsReader.readData(); //remove w
     std::vector<float> bias = biasReader.readData();
 
     // Assume input shape is [channels, height, width]
@@ -47,7 +47,7 @@ void ConvolutionLayer::execute() {
     applyPadding(input, inputHeight, inputWidth);
 
     // Perform convolution
-    for (int h = 0; h < outputHeight; ++h) {
+    for (int h = 0; h < outputHeight; ++h) { //size_t
         for (int w = 0; w < outputWidth; ++w) {
             float sum = 0.0f;
 

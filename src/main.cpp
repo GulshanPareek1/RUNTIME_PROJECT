@@ -8,11 +8,16 @@
 #include <iostream>
 #include <vector>
 #include <filesystem>
+#include<chrono>   // for time measuring 
 
 namespace fs = std::filesystem;
 
 int main(int argc, char** argv) {
     try {
+
+        // start the timer 
+        auto start = std::chrono::high_resolution_clock::now();
+
         // Check if we are running tests
         bool runTests = false;
         if (argc > 1 && std::string(argv[1]) == "--test") {
@@ -30,10 +35,16 @@ int main(int argc, char** argv) {
             for (const auto& layer : config) {
                 std::string layerType = layer.layerType;
 
+                /*read weight [0,1,2] and set as w_c, w_h, w_w
+                create a memalloc of size (w_c, w_h, w_w)
+                read the weights path to a file
+                copy the weights binary to weights ptr
+
+                */
                 if (layerType == "Conv2d") {
                     ConvolutionLayer convLayer(
                         layer.inputFilePath,
-                        layer.weightsFilePath,
+                        layer.weightsFilePath, //weight pointer along with w_c, w_h, w_w
                         layer.biasFilePath,
                         layer.outputFilePath,  // Correct outputFilePath
                         layer.attributes.at("kernel_size"),
@@ -79,6 +90,10 @@ int main(int argc, char** argv) {
 
             std::cout << "Execution complete!" << std::endl;
         }
+        auto end = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> elapsed = end-start;
+
+        std::cout<< "Total execution time: " << elapsed.count() << " seconds." <<std::endl;
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
         return EXIT_FAILURE;

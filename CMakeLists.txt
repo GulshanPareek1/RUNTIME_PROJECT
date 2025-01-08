@@ -8,7 +8,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Set the output directories for build files
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)#_$(CMAKE_BUILD_TYPE))
+set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Build type" FORCE)
+
 
 # Include directories for global use
 include_directories(
