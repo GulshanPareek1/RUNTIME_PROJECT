@@ -17,6 +17,8 @@ add_library(Operators
     src/ConvolutionLayer.cpp
     src/MaxPoolingLayer.cpp
     src/LinearLayer.cpp
+    src/Relu.cpp
+    src/FlattenLayer.cpp
 )
 
 target_include_directories(Operators PUBLIC include)
