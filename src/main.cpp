@@ -154,7 +154,7 @@ int main(int argc, char** argv) {
                 } else if (layer.layerType == "MaxPool2d") {
                 // Read input data
                 BinaryFileReader inputReader(layer.inputFilePath);
-                std::vector<float> inputData = inputReader.readFile();
+                std::vector<float> inputData = inputReader.readData();
 
                 // Extract input dimensions
                 std::vector<int> inputDims = layer.attributes.at("input_dims"); // [channels, height, width]
