@@ -1,5 +1,6 @@
 #include "FlattenLayer.h"
 #include <iostream>
+#include<chrono>   // for time measuring
 
 // Function to print the output tensor
 void printOutput(float* output, size_t N, size_t D) {
@@ -37,6 +38,9 @@ int main() {
     size_t H = 3; // Height
     size_t W = 3; // Width
 
+    // start the timer 
+        auto start = std::chrono::high_resolution_clock::now();
+
     // Allocate memory for the input tensor (1D array)
     size_t totalInputElements = N * C * H * W;
     float* input = new float[totalInputElements];
@@ -66,6 +70,11 @@ int main() {
     // Clean up memory
     delete[] input;
     delete[] output;
+
+    auto end = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> elapsed = end-start;
+
+        std::cout<< "Total execution time: " << elapsed.count() << " seconds." <<std::endl;
 
     return 0;
 }
